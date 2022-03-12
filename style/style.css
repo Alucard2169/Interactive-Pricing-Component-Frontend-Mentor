@@ -16,11 +16,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
+  background: url("/images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 375px;
 }
 
 .upper {
@@ -72,26 +73,29 @@ body {
           appearance: none;
   outline: none;
   -moz-appearance: none;
+  background: transparent;
   width: 100%;
   height: 7px;
-  background: #eaeefb;
   border-radius: 100px;
   border: none;
+  position: relative;
 }
 
-.container #price-input::-moz-range-thumb,
-.container #price-input::-webkit-slider-thumb {
+.container #price-input::-moz-range-thumb {
   width: 2rem;
   height: 2rem;
   border-radius: 100px;
   cursor: pointer;
   border: none;
-  position: relative;
-  background: url("https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/icon-slider.svg") no-repeat center, #6bfff0;
+  position: absolute;
+  background: url("/images/icon-slider.svg") no-repeat center, #6bfff0;
 }
 
-.container #price-input::-moz-range-progress,
-.container #price-input::-webkit-progress-bar {
+.container #price-input::-moz-range-track {
+  background: lightgray;
+}
+
+.container #price-input::-moz-range-progress {
   background: #a5f3eb;
   height: 100%;
   border-radius: 100px;
@@ -104,7 +108,17 @@ body {
   height: 2.1rem;
 }
 
-.container #price-input::-webkit-slider-thumb::hover {
+.container #price-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("/images/icon-slider.svg") no-repeat center, #6bfff0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100px;
+  margin-top: -.9rem;
+}
+
+.container #price-input::-webkit-slider-thumb:hover {
   width: 2.1rem;
   background-color: #10d5c2;
   -webkit-box-shadow: 0 5px 10px #10d5c2;
@@ -112,14 +126,27 @@ body {
   height: 2.1rem;
 }
 
-.container label {
-  font-size: .8rem;
+.container #price-input::-webkit-progress-value {
+  background: #a5f3eb;
+  height: 100%;
+  border-radius: 100px;
 }
 
-.container label span {
+.container #price-input::-webkit-slider-runnable-track {
+  background-color: lightgray;
+  width: 100%;
+  height: .2rem;
+  border-radius: 100px;
+}
+
+.container .price .dynamicPrice {
   color: #293356;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: 800;
+}
+
+.container .price .mode {
+  font-size: 1rem;
 }
 
 .container .change-button {
@@ -178,14 +205,18 @@ body {
   background: #a5f3eb;
 }
 
-.container .change-button .discount {
+.container .change-button .discount,
+.container .change-button .addition {
   overflow: hidden;
   font-weight: 800;
   font-size: .7rem;
-  padding: .2rem .3rem;
+  padding: .2rem .4rem;
+  width: 2.2rem;
+  white-space: nowrap;
   border-radius: 100px;
   color: #ff8c66;
   background-color: #feece7;
+  overflow: hidden;
 }
 
 .container .info {
@@ -203,6 +234,7 @@ body {
 
 .container .info .on {
   margin-right: 1rem;
+  width: 10px;
 }
 
 .container .trial {
@@ -214,6 +246,10 @@ body {
   background-color: #293356;
   color: white;
   cursor: pointer;
+}
+
+.container .disabled {
+  background: #4a5c9b;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -264,7 +300,9 @@ body {
     font-size: 1rem;
   }
   .container .change-button .discount {
-    margin-left: -4rem;
+    margin-left: -9rem;
+    overflow: visible;
+    width: 7rem;
   }
   .container .lower {
     border-top: 1px whitesmoke solid;

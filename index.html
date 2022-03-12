@@ -19,26 +19,26 @@
     <div class="container">
         <h2 class="heading">100K PAGEVIEWS</h2>
         <input type="range" step="1" min="0" max="30"  id="price-input">
-        <label for="price-input" class="price"><span>$16.00</span>/month</label>
+        <label for="price-input" class="price"><span class="dynamicPrice">$16.00</span><span class="mode">/month</span></label>
 
         <div class="change-button">
             <div class="switch">
                 <span class="monthly">Monthly Billing</span>
                 <div class="switchBtn">
-                    <input type="checkbox" id="check">
+                    <input type="checkbox" id="check" name="checkbox">
                     <label for="check" class="checkLabel"></label>
                 </div>
                 <span class="yearly">
                     Yearly Billing
                 </span>
             </div>
-            <span class="discount">-25%</span>
+            <span class="discount">-25% Discount</span>
         </div>
         <div class="lower">
             <div class="info">
                 <span class="unlimited"><img class="on" src="images/icon-check.svg">Unlimited Website</span>
-                <span class="data"><img class="on" src="images/icon-check.svg">100% data ownership</span>
-                <span class="email"><img class="on" src="images/icon-check.svg">Email report</span>
+                <span class="data"><img class="on" id="data" src="images/icon-check.svg">100% data ownership</span>
+                <span class="email"><img class="on" id="email" src="images/icon-check.svg">Email report</span>
             </div>
             <button class="trial">Start my trial</button>
         </div>
