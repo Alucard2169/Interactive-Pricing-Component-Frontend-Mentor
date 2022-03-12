@@ -16,7 +16,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("/images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
+  background: url("https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -79,17 +79,19 @@ body {
   border: none;
 }
 
-.container #price-input::-moz-range-thumb {
+.container #price-input::-moz-range-thumb,
+.container #price-input::-webkit-slider-thumb {
   width: 2rem;
   height: 2rem;
   border-radius: 100px;
   cursor: pointer;
   border: none;
   position: relative;
-  background: url("/images/icon-slider.svg") no-repeat center, #6bfff0;
+  background: url("https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/icon-slider.svg") no-repeat center, #6bfff0;
 }
 
-.container #price-input::-moz-range-progress {
+.container #price-input::-moz-range-progress,
+.container #price-input::-webkit-progress-bar {
   background: #a5f3eb;
   height: 100%;
   border-radius: 100px;
@@ -99,6 +101,14 @@ body {
   width: 2.1rem;
   background-color: #10d5c2;
   box-shadow: 0 5px 10px #10d5c2;
+  height: 2.1rem;
+}
+
+.container #price-input::-webkit-slider-thumb::hover {
+  width: 2.1rem;
+  background-color: #10d5c2;
+  -webkit-box-shadow: 0 5px 10px #10d5c2;
+          box-shadow: 0 5px 10px #10d5c2;
   height: 2.1rem;
 }
 

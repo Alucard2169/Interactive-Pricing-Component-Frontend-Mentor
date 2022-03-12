@@ -11,7 +11,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background: url('/images/pattern-circles.svg')no-repeat 50% 50px, url('/images/bg-pattern.svg');
+    background: url('https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/pattern-circles.svg')no-repeat 50% 50px, url('/images/bg-pattern.svg');
     text-align: center;
     align-items: center;
 }
@@ -63,24 +63,34 @@ body {
         border: none;
     }
 
-    #price-input::-moz-range-thumb {
+    #price-input::-moz-range-thumb,
+    #price-input::-webkit-slider-thumb {
         width: 2rem;
         height: 2rem;
         border-radius: 100px;
         cursor: pointer;
         border: none;
         position: relative;
-        background: url("/images/icon-slider.svg") no-repeat center, hsl(174, 100%, 71%);
+        background: url("https://github.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/blob/main/images/icon-slider.svg") no-repeat center, hsl(174, 100%, 71%);
     }
 
-    #price-input::-moz-range-progress {
+    #price-input::-moz-range-progress,
+    #price-input::-webkit-progress-bar {
         background: hsl(174, 77%, 80%);
         height: 100%;
         border-radius: 100px;
 
     }
 
+
     #price-input::-moz-range-thumb:hover {
+        width: 2.1rem;
+        background-color: hsl(174, 86%, 45%);
+        box-shadow: 0 5px 10px hsl(174, 86%, 45%);
+        height: 2.1rem;
+    }
+
+    #price-input::-webkit-slider-thumb::hover {
         width: 2.1rem;
         background-color: hsl(174, 86%, 45%);
         box-shadow: 0 5px 10px hsl(174, 86%, 45%);
