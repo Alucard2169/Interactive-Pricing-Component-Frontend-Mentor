@@ -16,7 +16,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
+  background: url("https://raw.githubusercontent.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/87ffed0797c3a1634664728ff174d4f63a227646/images/pattern-circles.svg") no-repeat 50% 50px, url("/images/bg-pattern.svg");
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
   border: none;
   position: relative;
-  background: url("images/icon-slider.svg") no-repeat center, #6bfff0;
+  background: url("https://raw.githubusercontent.com/Alucard2169/Interactive-Pricing-Component-Frontend-Mentor/87ffed0797c3a1634664728ff174d4f63a227646/images/icon-slider.svg") no-repeat center, #6bfff0;
 }
 
 .container #price-input::-moz-range-progress {
